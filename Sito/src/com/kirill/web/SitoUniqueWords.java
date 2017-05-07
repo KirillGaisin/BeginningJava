@@ -1,17 +1,23 @@
 package com.kirill.web;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class SitoUniqueWords {
 	
@@ -49,7 +55,7 @@ public class SitoUniqueWords {
 				Map<String, Integer> dupeMap = new HashMap<>();
 				for (String name : sortWords)
 					if(dupeMap.containsKey(name)) {
-						int count = dupeMap.get(name); // get выдает value по ключу в ()
+						int count = dupeMap.get(name);
 						dupeMap.put(name, ++count);
 					} else {
 						dupeMap.put(name, 1);
