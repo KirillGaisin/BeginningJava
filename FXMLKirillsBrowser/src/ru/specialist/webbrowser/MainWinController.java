@@ -31,7 +31,6 @@ public class MainWinController implements Initializable
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		//txtURL.setText("Enter your desired URL, starting with http://");
 		
 		txtURL.setOnKeyPressed(e->{
 			if (e.getCode()==KeyCode.ENTER)
